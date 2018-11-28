@@ -92,25 +92,25 @@ var HOST = '10.0.0.183';
 var PORT = 8004
 ;
 
-var client = new net.Socket();
-client.connect(PORT, HOST, function() {
+// var client = new net.Socket();
+// client.connect(PORT, HOST, function() {
 
-console.log('CONNECTED TO: ' + HOST + ':' + PORT);
-client.write(encryptedText);
+// console.log('CONNECTED TO: ' + HOST + ':' + PORT);
+// client.write(encryptedText);
 
-client.on('data', function (data) {
-  // var buf = Buffer.from(data,'base64').toString('ascii');
-  console.log(data);
-  // console.log(typeof(data));
-  // console.log("Enter to string", data);
-   console.log("buff",data.toString('utf8'));
+// client.on('data', function (data) {
+//   // var buf = Buffer.from(data,'base64').toString('ascii');
+//   console.log(data);
+//   // console.log(typeof(data));
+//   // console.log("Enter to string", data);
+//    console.log("buff",data.toString('utf8'));
   
-  var decryptedText = decrypt(data.toString('utf8'), securityKey);
-  console.log(decryptedText);
-  client.end();
-  });
+//   var decryptedText = decrypt(data.toString('utf8'), securityKey);
+//   console.log(decryptedText);
+//   client.end();
+//   });
 
-});
+// });
 
 
 
