@@ -88,8 +88,8 @@ encryptedText = "Android~"+encryptedText;
 
 //var net = require('net');
 
-var HOST = '10.0.0.67'; 
-var PORT = 5000;
+var HOST = '10.0.0.183'; 
+var PORT = 8003;
 
 var client = new net.Socket();
 client.connect(PORT, HOST, function() {
